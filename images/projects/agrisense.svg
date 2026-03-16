@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">Agrisense Preview</title>
+  <desc id="d">Placeholder preview for Agrisense crop disease detection project</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1725"/>
+      <stop offset="60%" stop-color="#12314a"/>
+      <stop offset="100%" stop-color="#0a1827"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="170" r="210" fill="#7ff5de" fill-opacity="0.25"/>
+  <rect x="120" y="120" width="560" height="360" rx="20" fill="#142c40" stroke="#7fefff" stroke-opacity="0.5"/>
+  <path d="M180 430c70-110 130-120 190-90s140 40 230-120" stroke="#79f3d0" stroke-width="10" fill="none"/>
+  <text x="120" y="620" fill="#9cefff" font-family="Sora,Segoe UI,sans-serif" font-size="74" font-weight="700">AGRISENSE</text>
+  <text x="120" y="690" fill="#c6f8ff" font-family="Manrope,Segoe UI,sans-serif" font-size="34">CNN Disease Detection · TensorFlow Serving</text>
+</svg>

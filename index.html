@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanishk Kumar Shrivastava | Fullstack & AI Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Tanishk Kumar Shrivastava, Fullstack and AI Engineer building performant web products and intelligent systems."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#0c131c",
+              mist: "#d4f5f2",
+              cyan: "#74f2ce",
+              aqua: "#6dd6ff",
+              steel: "#8ca3b3",
+            },
+            boxShadow: {
+              glow: "0 0 40px rgba(109,214,255,0.35)",
+            },
+            fontFamily: {
+              display: ["Sora", "sans-serif"],
+              body: ["Manrope", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-ink text-white font-body antialiased selection:bg-cyan selection:text-ink"
+  >
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cinema-bars" aria-hidden="true"></div>
+    <div class="tech-grid" aria-hidden="true"></div>
+    <div class="signal-line" aria-hidden="true"></div>
+
+    <div class="fx fx-one" aria-hidden="true"></div>
+    <div class="fx fx-two" aria-hidden="true"></div>
+
+    <header
+      class="sticky top-0 z-50 backdrop-blur-md bg-ink/55 border-b border-white/10"
+    >
+      <nav
+        class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#home" class="text-sm tracking-[0.28em] uppercase text-mist/80"
+          >Tanishk</a
+        >
+        <ul class="hidden md:flex gap-8 text-sm text-mist/70">
+          <li><a class="hover:text-cyan transition" href="#about">About</a></li>
+          <li>
+            <a class="hover:text-cyan transition" href="#experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-cyan transition" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="hover:text-cyan transition" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <a
+          href="resume.pdf"
+          download
+          class="hidden md:inline-flex px-4 py-2 rounded-full border border-cyan/40 bg-cyan/10 text-cyan text-sm font-semibold hover:bg-cyan hover:text-ink transition"
+          >Download Resume</a
+        >
+        <button
+          id="mobileMenuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          class="md:hidden inline-flex w-10 h-10 items-center justify-center rounded-full border border-cyan/35 bg-cyan/10 text-cyan"
+        >
+          <span class="sr-only">Menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="mobile-menu md:hidden" hidden>
+        <div class="mobile-menu-panel">
+          <a class="mobile-menu-link" href="#about">About</a>
+          <a class="mobile-menu-link" href="#experience">Experience</a>
+          <a class="mobile-menu-link" href="#projects">Projects</a>
+          <a class="mobile-menu-link" href="#contact">Contact</a>
+          <a class="mobile-menu-link" href="resume.pdf" download
+            >Download Resume</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="home" class="relative z-10">
+      <section class="hero-stage mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-36">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p
+              class="reveal inline-flex items-center gap-2 border border-cyan/30 bg-cyan/5 px-3 py-1 rounded-full text-xs tracking-[0.2em] uppercase text-cyan"
+            >
+              Fullstack + AI Engineer
+            </p>
+
+            <h1
+              class="reveal mt-8 text-4xl md:text-7xl font-display font-extrabold leading-tight md:leading-[1.05]"
+            >
+              I craft
+              <span class="text-gradient">intelligent digital products</span>
+              that feel fast, clean, and alive.
+            </h1>
+
+            <p
+              class="reveal mt-7 max-w-2xl text-mist/75 text-lg leading-relaxed"
+            >
+              I am Tanishk Kumar Shrivastava, an engineer focused on modern web
+              platforms, AI-powered features, and production-ready systems. I
+              blend product thinking, ML experimentation, and full-stack
+              execution to build experiences users remember.
+            </p>
+
+            <div class="reveal mt-10 flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                class="px-6 py-3 rounded-full bg-cyan text-ink font-bold hover:-translate-y-0.5 transition shadow-glow"
+                >View Projects</a
+              >
+              <a
+                href="resume.pdf"
+                download
+                class="px-6 py-3 rounded-full border border-cyan/35 bg-cyan/10 text-cyan font-bold hover:-translate-y-0.5 hover:bg-cyan hover:text-ink transition"
+                >Download Resume</a
+              >
+              <a
+                href="#contact"
+                class="px-6 py-3 rounded-full border border-white/20 hover:border-cyan/60 hover:text-cyan transition"
+                >Let us work together</a
+              >
+            </div>
+
+            <p
+              class="reveal mt-6 text-xs uppercase tracking-[0.22em] text-mist/45"
+            >
+              Scroll to enter project reel
+            </p>
+          </div>
+
+          <aside class="hero-portrait reveal" aria-label="Profile image">
+            <div class="portrait-shell">
+              <img
+                class="portrait-image"
+                src="images/profile.jpeg"
+                alt="Portrait of Tanishk Kumar Shrivastava"
+                loading="eager"
+                onerror="
+                  this.src = 'images/profile-fallback.svg';
+                  this.onerror = null;
+                "
+              />
+              <div class="portrait-glow" aria-hidden="true"></div>
+              <div class="portrait-meta" aria-hidden="true">
+                <span>AI Systems</span>
+                <span>Fullstack</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div
+          class="reveal mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+        >
+          <div class="stat-card">
+            <p class="text-3xl font-display font-bold">24%</p>
+            <p class="text-mist/65 text-sm mt-1">Sales boost delivered</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-3xl font-display font-bold">95%</p>
+            <p class="text-mist/65 text-sm mt-1">Model accuracy achieved</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-3xl font-display font-bold">40%</p>
+            <p class="text-mist/65 text-sm mt-1">Load-time reduction</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-3xl font-display font-bold">800K+</p>
+            <p class="text-mist/65 text-sm mt-1">Images trained on</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="section-title reveal">
+          <p class="kicker">About</p>
+          <h2>Engineering with clarity, speed, and curiosity.</h2>
+        </div>
+
+        <div class="about-shell mt-10">
+          <article class="about-main glass-card reveal">
+            <p class="about-kicker">Technical DNA</p>
+            <h3 class="about-headline">
+              Fullstack product engineer with a founder mindset and AI-first
+              execution.
+            </h3>
+            <p class="about-copy mt-4">
+              I build systems that go from idea to production with speed,
+              structure, and measurable outcomes. My workflow combines product
+              strategy, scalable architecture, and intelligent automation to
+              deliver software that performs in real-world constraints.
+            </p>
+            <p class="about-copy mt-4">
+              From frontend UX and API design to ML workflows and cloud
+              operations, I focus on shipping reliable, maintainable products
+              that are fast for users and sustainable for teams.
+            </p>
+            <div class="about-chip-grid mt-6">
+              <span>System Design</span>
+              <span>AI Integrations</span>
+              <span>Cloud Deployment</span>
+              <span>Performance Engineering</span>
+              <span>Automation Workflows</span>
+              <span>Clean Architecture</span>
+            </div>
+          </article>
+
+          <article class="about-side glass-card reveal">
+            <h3 class="card-title">Core Stack</h3>
+            <div class="skills-matrix mt-4">
+              <div class="skill-group">
+                <p class="skill-group-title">Languages</p>
+                <div class="skill-pills">
+                  <span>Python</span><span>JavaScript</span
+                  ><span>TypeScript</span><span>SQL</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title">Frameworks</p>
+                <div class="skill-pills">
+                  <span>Next.js</span><span>React</span><span>Node.js</span
+                  ><span>Django</span><span>Flask</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title">AI/ML</p>
+                <div class="skill-pills">
+                  <span>TensorFlow</span><span>PyTorch</span
+                  ><span>LangChain</span><span>Scikit-learn</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title">Infra</p>
+                <div class="skill-pills">
+                  <span>MongoDB</span><span>MySQL</span><span>AWS/GCP</span
+                  ><span>Linux</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="about-side glass-card reveal">
+            <h3 class="card-title">How I Build</h3>
+            <ul class="space-y-2 text-mist/75 leading-relaxed mt-3">
+              <li>
+                Design-first implementation with clear performance budgets
+              </li>
+              <li>API-driven backend architecture with secure data flows</li>
+              <li>AI-enhanced features with practical business impact</li>
+              <li>Monitoring, optimization, and long-term maintainability</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="section-title reveal">
+          <p class="kicker">Experience</p>
+          <h2>Built in real teams, shipped in real constraints.</h2>
+        </div>
+
+        <div class="mt-10 space-y-6">
+          <article class="timeline-card reveal">
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-2"
+            >
+              <div>
+                <h3 class="text-xl font-display font-semibold">
+                  Founder | AI-Integrated Fullstack Engineer
+                </h3>
+                <p class="text-cyan">Freshflow · Self-employed</p>
+              </div>
+              <p class="text-mist/60 text-sm">10/2025 - Present</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-mist/75">
+              <li>
+                Founded and independently built Freshflow, an AI-powered SaaS
+                platform focused on intelligent operational optimization.
+              </li>
+              <li>
+                Led complete lifecycle: architecture, fullstack development, AI
+                integration, deployment, and post-launch optimization.
+              </li>
+              <li>
+                Delivered scalable, production-grade systems with cloud and
+                automation workflows.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-2"
+            >
+              <div>
+                <h3 class="text-xl font-display font-semibold">
+                  Campus Ambassador
+                </h3>
+                <p class="text-cyan">Techfest, IIT Bombay · Internship</p>
+              </div>
+              <p class="text-mist/60 text-sm">06/2023 - 06/2024</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-mist/75">
+              <li>Worked remotely from Mumbai, Maharashtra, India.</li>
+              <li>
+                Completed customer relationship management and brand ambassador
+                training programs.
+              </li>
+              <li>
+                Represented Techfest outreach initiatives and engagement
+                campaigns.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-2"
+            >
+              <div>
+                <h3 class="text-xl font-display font-semibold">
+                  Full Stack Developer
+                </h3>
+                <p class="text-cyan">Hellbent Labs · Internship</p>
+              </div>
+              <p class="text-mist/60 text-sm">09/2022 - 01/2023</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-mist/75">
+              <li>
+                Led a 4-member team to build and deploy fullstack applications
+                across frontend, backend, and ML components.
+              </li>
+              <li>
+                Delivered production features and collaborated in onsite
+                development workflows in Vidisha, Madhya Pradesh.
+              </li>
+              <li>
+                Applied MySQL and full-stack engineering practices across live
+                business use cases.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-2"
+            >
+              <div>
+                <h3 class="text-xl font-display font-semibold">
+                  Full Stack Developer
+                </h3>
+                <p class="text-cyan">Sriraj K · Internship</p>
+              </div>
+              <p class="text-mist/60 text-sm">09/2022 - 01/2023</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-mist/75">
+              <li>
+                Built and optimized web applications using Django and machine
+                learning integrations.
+              </li>
+              <li>
+                Improved backend efficiency and implemented scalable data
+                processing workflows.
+              </li>
+              <li>Contributed remotely from Bengaluru, Karnataka, India.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-card reveal">
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-2"
+            >
+              <div>
+                <h3 class="text-xl font-display font-semibold">
+                  Django Developer
+                </h3>
+                <p class="text-cyan">Tech Driven Basic · Internship</p>
+              </div>
+              <p class="text-mist/60 text-sm">05/2022 - 07/2022</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-mist/75">
+              <li>Worked remotely from Indore, Madhya Pradesh, India.</li>
+              <li>
+                Optimized frontend and backend performance, reducing page load
+                time by 40%.
+              </li>
+              <li>
+                Improved system efficiency by 50% through backend refactoring
+                and query optimization.
+              </li>
+              <li>Core skills: MySQL and Django.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="section-title reveal">
+          <p class="kicker">Projects</p>
+          <h2>AI systems and full-stack products with practical impact.</h2>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+          <article class="project-card reveal">
+            <div class="project-preview-wrap">
+              <img
+                class="project-preview"
+                src="images/projects/agrisense.png"
+                alt="Agrisense project preview"
+                loading="lazy"
+                onerror="
+                  this.src = 'images/projects/agrisense.svg';
+                  this.onerror = null;
+                "
+              />
+            </div>
+            <p class="chip">Major Project</p>
+            <h3>Agrisense</h3>
+            <p>
+              Crop disease detection platform using CNN models trained on
+              800,000+ images, delivering 95%+ classification accuracy with
+              deployment-ready inference.
+            </p>
+            <p class="stack">
+              Next.js · Flask · MongoDB · TensorFlow Serving · CNN
+            </p>
+            <a
+              href="https://github.com/Tanishk05/agrisense_frontend"
+              target="_blank"
+              rel="noreferrer"
+              class="mt-4 inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan/10 text-cyan text-xs font-semibold tracking-[0.12em] uppercase hover:bg-cyan hover:text-ink transition"
+              >View Code</a
+            >
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-preview-wrap">
+              <img
+                class="project-preview"
+                src="images/projects/salvador.jpg"
+                alt="Salvador project preview"
+                loading="lazy"
+                onerror="
+                  this.src = 'images/projects/salvador.svg';
+                  this.onerror = null;
+                "
+              />
+            </div>
+            <p class="chip">Minor Project</p>
+            <h3>Salvador</h3>
+            <p>
+              Health recommendation assistant for anticipated illnesses with
+              support-vector-machine based predictions and full-stack decision
+              workflows.
+            </p>
+            <p class="stack">
+              Django · Scikit-learn · SVM · Random Forest · MongoDB
+            </p>
+            <a
+              href="https://github.com/Tanishk05/Salvador-Main"
+              target="_blank"
+              rel="noreferrer"
+              class="mt-4 inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan/10 text-cyan text-xs font-semibold tracking-[0.12em] uppercase hover:bg-cyan hover:text-ink transition"
+              >View Code</a
+            >
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-preview-wrap">
+              <img
+                class="project-preview"
+                src="images/projects/freshflow.jpg"
+                alt="Freshflow startup platform preview"
+                loading="lazy"
+                onerror="
+                  this.src = 'images/projects/freshflow.svg';
+                  this.onerror = null;
+                "
+              />
+            </div>
+            <p class="chip">Startup</p>
+            <h3>Freshflow</h3>
+            <p>
+              Founded and independently built Freshflow, an AI-powered SaaS
+              platform for intelligent operational optimization and automation.
+            </p>
+            <p class="stack">
+              Next.js · React · Node.js · Django · MongoDB · TensorFlow ·
+              LangChain
+            </p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a
+                href="https://freshflow.me/"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan text-ink text-xs font-semibold tracking-[0.12em] uppercase hover:-translate-y-0.5 transition"
+                >Live Product</a
+              >
+              <a
+                href="https://github.com/FreshFlow-AI/FreshFlow"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan/10 text-cyan text-xs font-semibold tracking-[0.12em] uppercase hover:bg-cyan hover:text-ink transition"
+                >View Code</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-preview-wrap">
+              <img
+                class="project-preview"
+                src="images/projects/fasalrin.png"
+                alt="Fasalrin chrome extension preview"
+                loading="lazy"
+                onerror="
+                  this.src = 'images/projects/fasalrin.svg';
+                  this.onerror = null;
+                "
+              />
+            </div>
+            <p class="chip">Chrome Extension</p>
+            <h3>Fasalrin</h3>
+            <p>
+              Browser extension that automates request approval workflows for
+              agriculture banks, reducing repetitive manual steps and improving
+              processing turnaround time.
+            </p>
+            <p class="stack">
+              Chrome Extensions API · JavaScript · Workflow Automation · Banking
+              Ops
+            </p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a
+                href="https://chromewebstore.google.com/detail/jcpaakdadbacicamnehcfhalglloipfg?utm_source=item-share-cb"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan text-ink text-xs font-semibold tracking-[0.12em] uppercase hover:-translate-y-0.5 transition"
+                >Web Store</a
+              >
+              <a
+                href="https://github.com/UtkarshArjariya/FasalRin-Helper"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan/10 text-cyan text-xs font-semibold tracking-[0.12em] uppercase hover:bg-cyan hover:text-ink transition"
+                >View Code</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-preview-wrap">
+              <img
+                class="project-preview"
+                src="images/projects/ai-tweet-generator.jpg"
+                alt="AI Tweet Generator project preview"
+                loading="lazy"
+                onerror="
+                  this.src = 'images/projects/ai-tweet-generator.svg';
+                  this.onerror = null;
+                "
+              />
+            </div>
+            <p class="chip">AI Product</p>
+            <h3>AI Tweet Generator</h3>
+            <p>
+              AI writing tool that transforms user intent and tone into polished
+              tweets, improving relevance and engagement while keeping output
+              quick and editable.
+            </p>
+            <p class="stack">Next.js · MongoDB · Django · GSAP · JavaScript</p>
+            <a
+              href="https://github.com/Tanishk05/ai-tweet-gen"
+              target="_blank"
+              rel="noreferrer"
+              class="mt-4 inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan/10 text-cyan text-xs font-semibold tracking-[0.12em] uppercase hover:bg-cyan hover:text-ink transition"
+              >View Code</a
+            >
+          </article>
+
+          <article class="glass-card reveal md:col-span-2">
+            <p class="chip">Founder Build</p>
+            <h3 class="mt-3 text-2xl font-display font-semibold text-mist">
+              Freshflow Deep Dive
+            </h3>
+            <p class="mt-4 text-mist/75 leading-relaxed">
+              Founded and independently built Freshflow, an AI-powered SaaS
+              platform focused on designing intelligent, scalable systems for
+              operational optimization and automation.
+            </p>
+            <p class="mt-4 text-mist/75 leading-relaxed">
+              I led the complete product lifecycle from ideation, architecture
+              planning, and database design to fullstack implementation, AI
+              integration, deployment, and post-launch optimization. The
+              platform was built with scalability, performance, and clean
+              architecture as core principles for production-level reliability.
+            </p>
+            <p class="mt-4 text-mist/75 leading-relaxed">
+              On the frontend, I built a responsive and performance-optimized
+              interface using Next.js and React. On the backend, I architected
+              scalable APIs and core logic using Node.js and Django, structured
+              MongoDB schemas, and implemented secure authentication plus
+              workflow-driven data pipelines.
+            </p>
+            <p class="mt-4 text-mist/75 leading-relaxed">
+              A key focus was AI-driven product behavior. I designed and
+              integrated machine learning and LLM-based workflows for
+              intelligent automation and decision support, including inference
+              orchestration and backend AI operations.
+            </p>
+            <p class="mt-4 text-mist/75 leading-relaxed">
+              Beyond development, I handled deployment, AWS/GCP cloud
+              configuration, Linux server setup, environment management,
+              performance tuning, and monitoring to ensure stability and
+              scalability.
+            </p>
+            <p class="mt-5 text-cyan/90 text-sm tracking-wide">
+              Tech Stack: Next.js, React, Node.js, Django, MongoDB, Python,
+              TensorFlow, LangChain, AWS/GCP, Linux
+            </p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a
+                href="https://freshflow.me/"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan text-ink text-xs font-semibold tracking-[0.12em] uppercase hover:-translate-y-0.5 transition"
+                >Visit Freshflow</a
+              >
+              <a
+                href="https://github.com/FreshFlow-AI/FreshFlow"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex px-4 py-2 rounded-full border border-cyan/35 bg-cyan/10 text-cyan text-xs font-semibold tracking-[0.12em] uppercase hover:bg-cyan hover:text-ink transition"
+                >View Freshflow Repository</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div class="section-title reveal">
+          <p class="kicker">Education & Recognition</p>
+          <h2>Strong fundamentals, consistent execution.</h2>
+        </div>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <article class="glass-card reveal md:col-span-2">
+            <h3 class="card-title">B.Tech in AI/ML</h3>
+            <p class="card-copy">
+              Sagar Institute of Research and Technology, Bhopal (2021 - 2025)
+            </p>
+            <p class="card-copy mt-3">CGPA: 7.99</p>
+            <p class="card-copy mt-3">
+              Relevant coursework: Statistics, Machine Learning, Deep Learning,
+              Data Visualization
+            </p>
+          </article>
+
+          <article class="glass-card reveal">
+            <h3 class="card-title">Highlights</h3>
+            <ul class="space-y-2 text-mist/75 leading-relaxed">
+              <li>1st place, SOL Workshop</li>
+              <li>2nd place, Code Wars at Technosaga</li>
+              <li>2nd place, National Hackathon Code Energia</li>
+              <li>Internships: Blockchain, SQL, Machine Learning</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="mx-auto max-w-6xl px-6 pt-16 pb-24 md:pt-20 md:pb-32"
+      >
+        <div class="glass-card reveal text-center">
+          <p class="kicker justify-center">Contact</p>
+          <h2 class="mt-3 text-3xl md:text-5xl font-display font-bold">
+            Let us build something meaningful.
+          </h2>
+          <p class="mt-5 text-mist/75 max-w-2xl mx-auto">
+            Open to full-time roles, freelance projects, and AI-first product
+            collaboration.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3 md:gap-4">
+            <a
+              class="px-5 py-3 rounded-full bg-cyan text-ink font-bold hover:-translate-y-0.5 transition"
+              href="mailto:tanishkumarshrivastava@gmail.com"
+              >Email</a
+            >
+            <a
+              class="px-5 py-3 rounded-full border border-white/20 hover:border-cyan/60 hover:text-cyan transition"
+              href="tel:+919755656242"
+              >Call</a
+            >
+            <a
+              class="px-5 py-3 rounded-full border border-white/20 hover:border-cyan/60 hover:text-cyan transition"
+              target="_blank"
+              rel="noreferrer"
+              href="https://linkedin.com/in/tanishkkumarshrivastava"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="relative z-10 border-t border-white/10 py-6 px-6 text-center text-sm text-mist/55"
+    >
+      <p>
+        © 2026 Tanishk Kumar Shrivastava. Crafted with code, data, and intent.
+      </p>
+    </footer>
+
+    <button id="backToTop" type="button" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.16/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

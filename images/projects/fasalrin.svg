@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">Fasalrin Preview</title>
+  <desc id="d">Placeholder preview for Fasalrin chrome extension automation</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#091322"/>
+      <stop offset="54%" stop-color="#102840"/>
+      <stop offset="100%" stop-color="#0a1625"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="200" y="150" width="1200" height="580" rx="28" fill="#102638" stroke="#84e9ff" stroke-opacity="0.45"/>
+  <rect x="260" y="220" width="1080" height="88" rx="18" fill="#16324b"/>
+  <circle cx="310" cy="264" r="16" fill="#7ef4dd"/>
+  <circle cx="360" cy="264" r="16" fill="#6dd6ff"/>
+  <path d="M270 390h1000M270 455h930M270 520h860" stroke="#91ebff" stroke-width="14" stroke-linecap="round"/>
+  <rect x="1040" y="566" width="300" height="72" rx="18" fill="#78f1dc" fill-opacity="0.45"/>
+  <text x="260" y="792" fill="#a4f3ff" font-family="Sora,Segoe UI,sans-serif" font-size="72" font-weight="700">FASALRIN</text>
+  <text x="260" y="846" fill="#cafbff" font-family="Manrope,Segoe UI,sans-serif" font-size="30">Chrome Extension · Agriculture Bank Approval Automation</text>
+</svg>
